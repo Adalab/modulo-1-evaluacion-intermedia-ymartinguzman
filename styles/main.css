@@ -1,6 +1,48 @@
-body {
-  background-color: red;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
-h1 {
-  color: green;
+/*HEADER*/
+.header {
+  width: 100%;
+  background-color: green;
+  height: 160px;
+}
+.image {
+  width: 155px;
+  margin-top: 10px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.list-item-1,
+.list-item-2 {
+  font-family: "Rubik";
+  color: #4a4a4a;
+  font-size: 16px;
+}
+.list-item-1 {
+  margin-right: 20px;
+}
+.link {
+  text-decoration: none;
+}
+/*MAIN*/
+.main {
+  background-color: #3cdbc0;
+  height: 100vh;
+}
+.title {
+  color: #ffffff;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.title-inner {
+  display: block;
 }
