@@ -1,57 +1,66 @@
 * {
   margin: 0;
+  padding: 0; /*ha hecho falta para terminar de centrar el menú*/
   box-sizing: border-box;
+  font-family: "Rubik";
 }
-/*HEADER*/
 .header {
   width: 100%;
-  background-color: white;
+  background-color: #ffffff;
+  position: fixed; /*para que no haga scroll*/
+  top: 0; /*siempre porner una coordenada*/
+  display: flex; /*distribucion de elementos*/
+  flex-direction: column; /*como qquiero que se distribuyan los elementos*/
+  align-items: center; /*alineación*/
+  /*tambientengo que darle distribucion al main*/
 }
 .container-image {
-  display: block;
-  margin: 0 auto;
-  width: 155px;
-}
-.image {
   width: 155px;
   margin-top: 10px;
 }
 
 .list {
-  list-style: none;
+  list-style: none; /*para quitar puntos de la lista*/
   display: flex;
+  flex-direction: row;
   align-items: center;
-  margin: 0 auto;
-  width: 290px;
+  justify-content: space-between; /*si pongo, justify center,no termina de centrarse*/
+  /*no pongo ni margin 0 ni width 155 pq sino se pisa y no aplica el justify*/
 }
 .list-item {
-  font-family: "Rubik";
-  color: #4a4a4a;
   font-size: 16px;
-  padding: 10px 20px 13px 20px;
+  text-transform: uppercase;
 }
-
 .link {
+  color: #4a4a4a;
   text-decoration: none;
-}
-
-@media all and(min-width:768px) {
-  .header {
-    justify-content: space-between;
-  }
+  padding: 10px 20px 13px 20px;
+  display: inline-block;
 }
 /*MAIN*/
 .main {
+  /*al darle posición fija, el main se esconde.Para sacarlo, vuelvo a jugar con flex*/
   background-color: #3cdbc0;
   height: 100vh;
-}
-.title {
-  color: #ffffff;
-  font-size: 40px;
-
-  height: 100vh;
+  display: flex; /*distribución de los elementos*/
+  justify-content: center; /*distribucion del espacio alrededor*/
+  align-items: center; /*alineacion de los elementos dentro de la caja*/
 }
 .title-inner {
+  color: white;
+  font-size: 30px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-transform: capitalize;
+}
+/*RESPONSIVE PARA TABLET*/
+@media all and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .title-inner {
+    font-size: 40px;
+  }
 }
